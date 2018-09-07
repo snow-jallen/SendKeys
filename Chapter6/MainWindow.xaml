@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:Chapter6"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+
+        <TextBlock Text="Pick an application" />
+        <ComboBox ItemsSource="{Binding Processes}" SelectedItem="{Binding SelectedProcess}" />
+        <TextBlock Text="Enter Text" />
+        <TextBox Text="{Binding Text}"
+                 AcceptsReturn="True"
+                 AcceptsTab="True"
+                 Height="200" />
+        <Button Content="Send Keys"
+                Command="{Binding SendText}" />
+
+    </StackPanel>
 </Window>
